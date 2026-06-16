@@ -152,7 +152,7 @@ h6,
 
 /*** Hero Header ***/
 .logo {
-    max-width: 40px ; /* Adjust size as needed */
+    max-width: 100px ; /* Adjust size as needed */
     height: auto;
     margin-right: 10px;
 }
@@ -561,3 +561,111 @@ h6,
     padding-right: 0;
     border-right: none;
 }
+
+.blog-post h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.blog-post h4 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.blog-post p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #6c757d;
+}
+
+.blog-hashtags .badge {
+    font-size: 14px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.btn-primary {
+    margin-top: 10px;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity */
+    z-index: 1;
+}
+
+.header .menu {
+    position: relative;
+    z-index: 2;
+    color: black; /* Ensure the text is a contrasting color */
+}
+/* Improve text visibility */
+.navbar .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .9); /* Increase opacity for better visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow for contrast */
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Optionally, add a subtle background color */
+.navbar .navbar-nav .nav-link {
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    padding: 5px 10px; /* Add some padding for readability */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background on hover/active */
+}
+
+.video-loop video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #000; /* Fallback color for when video doesn't load */
+}
+  .highlight-link {
+    color: #ffffff;
+    background-color: #007BFF;
+    padding: 2.5px 5px; /* Reduced padding */
+    border-radius: 3px; /* Reduced border radius */
+    font-size: 0.75rem; /* Smaller font size */
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 5px #007BFF, 0 0 10px #007BFF, 0 0 15px #007BFF; /* Reduced glow intensity */
+    transition: all 0.3s;
+  }
+  .highlight-link:hover {
+    box-shadow: 0 0 10px #FFC300, 0 0 20px #FFC300, 0 0 30px #FFC300; /* Reduced hover glow intensity */
+ 
+  }

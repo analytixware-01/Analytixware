@@ -1,4 +1,4 @@
-(function ($) {
+(function ($) { 
     "use strict";
 
     // Spinner
@@ -61,5 +61,24 @@
         ]
     });
     
-})(jQuery);
+    // Add Read More/Read Less functionality for blog content
+    document.querySelectorAll('.toggle-content').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = this.closest('.card-body');
+            const shortContent = card.querySelector('.short-content');
+            const fullContent = card.querySelector('.full-content');
+            
+            if (fullContent.style.display === 'none') {
+                fullContent.style.display = 'block';
+                shortContent.style.display = 'none';
+                this.textContent = 'Read Less';
+            } else {
+                fullContent.style.display = 'none';
+                shortContent.style.display = 'block';
+                this.textContent = 'Read More';
+            }
+        });
+    });
 
+})(jQuery);

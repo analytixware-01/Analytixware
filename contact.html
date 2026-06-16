@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7NYJMPT9YR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7NYJMPT9YR');
+</script>
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"siteId":3841857,"cookiePolicyId":33422913,"lang":"en","storage":{"useSiteId":true}};
+</script>
+<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3841857.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+    <script 
+      type="text/javascript"
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="O9hhI0"
+    >
+    </script>
+	
     <meta charset="utf-8">
-    <title>Analytixware - Data Analysis</title>
+    <title>Contact Us</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-     <link href="img/logo.jpg" rel="icon">
+    <link href="img/icon.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,13 +64,21 @@
         </div>
     </div>
     <!-- Spinner End -->
-
+	<style>
+.hidden-text {
+    visibility: hidden; /* Hides the text but keeps space in the layout */
+    /* Alternatively, you can use other hiding techniques like: */
+    /* display: none; */       /* Completely hides the text and removes space */
+    /* opacity: 0; */          /* Keeps space but makes the text invisible */
+    /* position: absolute; left: -9999px; */ /* Moves text off-screen */
+}
+</style>
     <!-- Navbar Start -->
     <div class="container-fluid sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="text-white">Analytixware</h1>
+                    <h1 class="text-white"><img src="img/logo-no-background.png"  class="logo"><span Class="hidden-text">Analytixware</span></h1>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -55,11 +87,12 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="about.html" class="nav-item nav-link">About Us</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
                         <a href="project.html" class="nav-item nav-link">Case Study</a>
-                        <a href="feature.html" class="nav-item nav-link">Features</a>
-                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                <a href="blogs.html" class="nav-item nav-link">Blogs</a>
+
+                        <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
                     </div>
                     <!-- <button type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></button> -->
@@ -109,13 +142,19 @@
         <div class="container py-5">
             <div class="mx-auto text-center" style="max-width: 500px;">
                 <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Contact Us</div>
-                <h1 class="mb-4">If You Have Any Query, Please Contact Us</h1>
+                <h1 class="mb-4">Please contact us for a free demo</h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <div>
-                        <form id="contactForm" action="https://formspree.io/f/mjvndekv" method="post">
+                  
+                    <div class = "row justify-content-center">
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQdeYQU3rfuYcSjdjCiDK0R8qmTB05lOQ-d-FD6TKX89gMHQ/viewform?embedded=true" width="640" height="887" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                 <!--       <form action="https://formsubmit.co/bhavik@analytixware.in" method="POST">
+				<input type = "hidden" name="_next" value = "https://analytixware.in/thankyou.html">
+
+<input type = "hidden" name="_subject" value = "Greetings From Analytixware!">
+<input type="hidden" name="_captcha" value="false">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
@@ -129,6 +168,13 @@
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="number" name="number" placeholder="Your Phone Number" required maxlength="10" pattern="\d{10}">
+                                        <label for="number">Your Phone number</label>
+                                    </div>
+                                </div>
+                                
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
@@ -142,10 +188,10 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button src="validation.js" class="btn btn-primary w-100 py-3 type="submit" >Send Message</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>
@@ -159,18 +205,20 @@
             <div class="row g-5">
                 <div class="col-md-4">
                     <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-white">Analytixware</h1>
+                        <h1 class="text-white"><img src="img/logo-no-background.png"  class="logo"></span> </h1>
                     </a>
-                    <p class="mb-0">Organizations that leverage data analytics effectively gain a competitive edge in today's data-driven world. By analyzing data, businesses can identify unique insights and trends that better understand the market and their competitors, helping them stay ahead of the competition.</p>
+                    <p class="mb-0">We empower businesses with data insights. Leverage our data analytics solutions to stay ahead in a competitive world.</p>
                 </div>
                 <div class="col-md-4">
                     <h5 class="text-white mb-4">Contact Us</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>A 1201 Ekta Festival, 132 Feet Ring Road, Naranpura, Ahmedabad</p>
                     <p><i class="fa fa-phone-alt me-3"></i>+91 9011719639</p>
-                    <p><i class="fa fa-envelope me-3"></i>analytixware.in@gmail.com</p>
+                    <p><i class="fa fa-envelope me-3"></i>bhavik@analytixware.in</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href="mailto:analytixware.in@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/analytixware/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:bhavik@analytixware.in"><i class="fas fa-envelope"></i></a>
+                        <a class="btn btn-outline-light btn-social" target = "_blank" href="https://www.linkedin.com/company/analytixware-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+<a class="btn btn-outline-light btn-social" target="_blank"  href="https://x.com/AnalytixwareIn"><i class="fab fa-twitter"></i></a>
+<a class="btn btn-outline-light btn-social" target="_blank" href="https://instagram.com/Analytixware"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -179,7 +227,7 @@
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
                     <a class="btn btn-link" href="service.html">Services</a>
                     <a class="btn btn-link" href="project.html">Case Study</a>
-                    <a class="btn btn-link" href="feature.html">Feature</a>
+                    
                 </div>
             </div>
         </div>
@@ -187,7 +235,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Analytixware</a>, All Right Reserved.
+                        Copyright &copy; 2024 Analytixware Technologies Pvt Ltd. All Rights Reserved.
                     </div>
                 </div>
             </div>
@@ -209,5 +257,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 </html>
