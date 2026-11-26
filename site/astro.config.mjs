@@ -8,4 +8,6 @@ export default defineConfig({
   build: { format: 'file' },
   trailingSlash: 'never',
   compressHTML: true,
+  // Keep blog text exactly as written (no automatic curly quotes / dashes).
+  markdown: { smartypants: false },
 });

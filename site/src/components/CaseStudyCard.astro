@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props { study: CollectionEntry<'caseStudies'>['data'] }
+const { study } = Astro.props;
+---
+<div class="col-lg-4 wow fadeIn" style="max-width: 370px;">
+    <div class="case-item position-relative overflow-hidden rounded mb-2">
+        <img loading="lazy" decoding="async" class="img-fluid" src={study.image} alt="">
+        <a class="case-overlay text-decoration-none" href={study.link}>
+            <h4 class="lh-base text-white mb-3">{study.title}</h4>
+            <p class="lh-base text-white mb-3">{study.summary}</p>
+            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+        </a>
+    </div>
+</div>

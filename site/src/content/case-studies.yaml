@@ -1,0 +1,29 @@
+# Case study cards on the Case Study page.
+
+- id: donation-optimal-ask
+  title: Donation Optimal Ask
+  summary: >-
+    CAU stands for Clark Atlanta University in the US. Rising Analytics worked closely with the CAU
+    Alumni Relations Department. The CAU Alumni Relations Department works to establish, build,
+    maintain, and strengthen the relationships with Alumni constituents, and drive alumni donations
+    to the Clark Atlanta University. The team is also responsible for...
+  image: img/grey-bg.png
+  link: getcasestudy.html
+- id: credit-risk-model
+  title: Credit Risk Model
+  summary: >-
+    Credit risk modeling refers to the use of financial models to estimate losses a firm might
+    suffer in the event of a borrower's default. This model helps to evaluate credit score of each
+    borrower based on their demographics, past accounting variables and third-party data such as
+    Vantage score and Fico score. The Credit Score helps to determine many factors . . .
+  image: img/grey-bg.png
+  link: getcasestudy.html
+- id: propensity-to-pay
+  title: Propensity to Pay
+  summary: >-
+    In today's world where there is economic uncertainty for every human being, it's quite necessary
+    to understand the financial condition of an individual and have a proper debt management program
+    in order to avoid huge write-off amount and reduce number of defaulters. It becomes necessary to
+    identify and divide customers in various segments where...
+  image: img/grey-bg.png
+  link: getcasestudy.html

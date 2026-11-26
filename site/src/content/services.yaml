@@ -1,0 +1,73 @@
+# Services shown on the home page (title + summary) and the Services page (title + description).
+# icon: one of fa-chart-bar, fa-brain, fa-chart-pie, fa-dollar-sign, fa-chart-line, fa-code, fa-comments
+
+- id: statistical-analysis
+  title: Statistical Analysis
+  icon: fa-chart-bar
+  summary: Turn raw business data into reliable patterns, segments, forecasts, and decision-ready evidence.
+  description: >-
+    Statistical analysis involves collecting, exploring, and presenting large amounts of data to
+    discover underlying patterns and trends. It helps in making informed decisions by interpreting
+    complex data sets. This process is essential for creating predictive models and validating
+    experimental results.
+- id: machine-learning
+  title: Machine Learning
+  icon: fa-brain
+  summary: >-
+    Build predictive models that improve targeting, risk scoring, retention, forecasting, and
+    automation.
+  description: >-
+    Machine learning trains algorithms to recognize patterns and make predictions from data,
+    enabling systems to learn and improve without explicit programming. This drives innovations in
+    personalized recommendations, autonomous vehicles, and more.
+- id: data-visualization
+  title: Data Visualization
+  icon: fa-chart-pie
+  summary: Design dashboards that make KPIs, trends, and operational decisions clear at a glance.
+  description: >-
+    Data visualization transforms complex data into clear, interactive visual representations,
+    making it easier to identify patterns, trends, and insights. It enhances decision-making by
+    presenting data in an accessible, visually appealing format.
+- id: financial-models
+  title: Financial Models
+  icon: fa-dollar-sign
+  summary: Model growth, profitability, risk, budgets, and scenarios with practical analytics workflows.
+  description: >-
+    Financial models are tools used to forecast a company's financial performance by analyzing
+    historical data and market trends. They help in decision-making by simulating different
+    scenarios. These models are essential for budgeting, investment analysis, and strategic
+    planning.
+- id: data-integration-and-etl
+  title: Data Integration & ETL
+  icon: fa-chart-line
+  summary: Connect spreadsheets, apps, databases, and cloud tools into clean analytics-ready datasets.
+  description: >-
+    Data Integration & ETL (Extract, Transform, Load) services streamline data movement across
+    systems, ensuring seamless integration, transformation, and loading. We optimize data workflows
+    to enhance efficiency and enable insightful decision-making.
+- id: process-automation
+  title: Process Automation
+  icon: fa-code
+  summary: >-
+    Reduce repetitive reporting and manual operations with lightweight automation built around your
+    workflow.
+  description: >-
+    Process Automation involves using technology to automate repetitive and routine tasks, improving
+    efficiency and accuracy. It streamlines workflows, reduces human error, and frees up employees
+    to focus on more strategic activities, enhancing overall productivity.
+- id: process-optimization
+  title: Process Optimization
+  icon: fa-code
+  summary: Use data to identify bottlenecks, improve throughput, and focus teams on high-impact actions.
+  description: >-
+    Process Optimization enhances efficiency by streamlining operations, reducing waste, and
+    improving productivity. It leverages data analysis and advanced algorithms to identify and
+    implement the best practices. This leads to cost savings .
+- id: natural-language-processing
+  title: Natural Language Processing
+  icon: fa-comments
+  summary: Analyze customer feedback, documents, and conversations with text analytics and language models.
+  description: >-
+    Natural Language Processing (NLP) empowers machines to comprehend human language, automate text
+    analysis tasks, and significantly enhance user interactions through the implementation of
+    chatbots and virtual assistants, lexical analysis and many more.

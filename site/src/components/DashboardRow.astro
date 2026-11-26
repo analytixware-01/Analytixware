@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  dashboard: CollectionEntry<'dashboards'>['data'];
+  /** image on the left instead of the right */
+  reverse?: boolean;
+}
+const { dashboard, reverse = false } = Astro.props;
+---
+<div class:list={['row align-items-center justify-content-center my-4', { 'flex-row-reverse': reverse }]}>
+    <div class:list={['col-lg-6 text-center mb-4 mb-lg-0', reverse ? 'text-lg-end' : 'text-lg-start']}>
+        <h2 class="mb-3">{dashboard.title}</h2>
+        <p>{dashboard.description}</p>
+    </div>
+    <div class="col-lg-6 text-center" style="padding-left: 20px;">
+        <img loading="lazy" decoding="async" src={dashboard.image} alt={dashboard.alt} class="img-fluid" style="max-width: 90%; height: auto; margin-left: 0;">
+    </div>
+</div>

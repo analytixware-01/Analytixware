@@ -1,0 +1,202 @@
+# Dashboard templates, shown top to bottom (sides alternate automatically).
+
+- id: ecommerce-solutions
+  title: Ecommerce Solutions
+  description: >-
+    Discover our comprehensive ecommerce solutions designed to streamline your online business,
+    enhance customer experiences, and boost your sales. Our cutting-edge technology integrates
+    seamlessly with your existing systems to provide an all-in-one platform for managing products,
+    orders, payments, and more.
+  image: img/ecommerce.jpg
+  alt: Ecommerce Image
+- id: inventory-management
+  title: Inventory Management
+  description: >-
+    This dashboard shows the current inventory level and reorder point for different product
+    categories. Additionally, it presents a line chart tracking the stock in and stock out trends
+    over time, and a table detailing the inventory level, reorder point, and difference for each
+    product category by store. Finally, it includes a bar chart comparing the stock in and stock out
+    quantities for each product category.
+  image: img/inventory.png
+  alt: Inventory Management
+- id: marketing-dashboard
+  title: Marketing Dashboard
+  description: >-
+    This dashboard shows the brand search, brand mentions, total customers, and total budget, along
+    with their percentage changes. Additionally, it presents line charts for brand search and brand
+    mentions, customer acquisition growth, LinkedIn marketing performance, and display marketing
+    performance. Further, it includes a pie chart for NPS (Net Promoter Score) and a table with
+    demographic breakdowns for LTV to CAC ratio and total budget.
+  image: img/marketing.png
+  alt: Marketing Dashboard
+- id: rfm-overview-dashboard
+  title: RFM Overview Dashboard
+  description: >-
+    This dashboard shows the total users, total transactions, total revenue, and percentage of new,
+    returning, and churned users. Additionally, it presents charts for recency and monetary analysis
+    of each segment and user, as well as a table with key metrics like average days since last
+    transaction, average transaction per user, and average revenue per user for each segment.
+    Finally, it includes a bar chart comparing the total users, percentage of total users, total
+    revenue, and total frequency for each segment.
+  image: img/rfm_overview.png
+  alt: RFM Overview
+- id: rfm-user-acquisition-tracker
+  title: RFM User Acquisition Tracker
+  description: >-
+    This dashboard shows the total users, user acquisition trend line, and key performance
+    indicators (KPIs) by user acquisition month. The KPIs include user acquisitions, acquisition
+    growth, cumulative users, new users, returning users, churned users, macro loyal users, macro
+    promising users, and macro sleep users. The dashboard also includes a table with detailed data
+    on these KPIs for each month.
+  image: img/rfm_useracquisition.png
+  alt: RFM User Tracker
+- id: rfm-personalized-marketing
+  title: RFM Personalized Marketing
+  description: >-
+    This dashboard shows the total users, total transactions, total revenue, and percentage of top
+    spenders, one-time customers, and churned users. Additionally, it presents a table with key
+    metrics for each customer segment, including RFM (Recency, Frequency, Monetary) segment
+    description, retention strategy, CLV (Customer Lifetime Value) category, CLV, days since last
+    transaction, total transactions, total revenue, and lifetime months.
+  image: img/rfm_userretention.png
+  alt: RFM User Retention
+- id: sales-tracker
+  title: Sales Tracker
+  description: >-
+    This dashboard shows the total sales by country, state, city, and store, along with their
+    percentage changes. Additionally, it presents a pie chart for total sales by product type, a map
+    showing sales by geo locations, and a bar chart for month-over-month sales.
+  image: img/Sales.png
+  alt: Sales Tracker
+- id: sales-movement-tracker
+  title: Sales Movement Tracker
+  description: >-
+    This dashboard shows the change in total sales for products, age groups, brands, and departments
+    between 2022 and 2023. Additionally, it presents bar charts comparing the sales for each
+    category in the two years.
+  image: img/sales_movement.png
+  alt: Sales Movement
+- id: shopify-dashboard
+  title: Shopify Dashboard
+  description: >-
+    This dashboard shows the total sales, quantity ordered, cancelled orders, and unique orders,
+    along with their percentage changes. Additionally, it presents line charts for sales and orders,
+    a bar chart for sales by discount code, a table for top products sold, a chart for orders by
+    channel, and a table for this week's order details.
+  image: img/shopify.png
+  alt: Shopify Dashboard
+- id: supply-chain-tracker
+  title: Supply Chain Tracker
+  description: >-
+    This dashboard shows the total order cost, total quantity ordered, days late by average late
+    days, and percentage accepted for December 2023. Additionally, it presents line charts for total
+    order cost and total quantity ordered over time. The dashboard also includes bar charts for
+    total quantity ordered and total order cost by country and product type.
+  image: img/supplychain.png
+  alt: Supply Chain Movement
+- id: bank-branch-performance-dashboard
+  title: Bank Branch Performance Dashboard
+  description: >-
+    Highlights top-performing branches based on annual revenue, expenses, deposits, and efficiency
+    ratios. Compares actual performance with targets for revenue, expenses, and net interest
+    margins, helping monitor branch-level profitability and operational effectiveness.
+  image: img/bank_branch_performance.png
+  alt: Bank Branch Performance
+- id: decay-rates-and-balance-trends
+  title: Decay Rates and Balance Trends
+  description: >-
+    Analyzes account decay rates and their impact on balances over time. Provides insights into
+    retention rates, actuarial life table calculations, and the average balance trends, aiding in
+    long-term planning and account management.
+  image: img/bank_decay_rates.png
+  alt: Decay Rates
+- id: most-least-profitable-accounts
+  title: Most & Least Profitable Accounts
+  description: >-
+    Displays detailed profitability metrics for customer accounts, including annual profit, net
+    income, incremental profits, and expenses. Facilitates identification of high-value and
+    low-performing accounts for targeted strategies.
+  image: img/bank_most_profitable_acc.png
+  alt: Most & Least profitable accounts
+- id: deposit-goals-tracker
+  title: Deposit Goals Tracker
+  description: >-
+    This dashboard visualizes the progress toward deposit targets, breaking down actuals against
+    goals by region, branch, or customer segment. It provides actionable insights into performance
+    gaps and areas requiring attention.
+  image: img/bank_deposit_goals.png
+  alt: Deposit Goals
+- id: financial-executive-dashboard
+  title: Financial Executive Dashboard
+  description: >-
+    This high-level dashboard offers a comprehensive overview of key performance metrics such as
+    revenue, growth rates, and financial targets, enabling executives to monitor the institution's
+    overall health and strategic alignment.
+  image: img/bank_executive.png
+  alt: Bank Executive Dashboard
+- id: loan-performance-tracker
+  title: Loan Performance Tracker
+  description: >-
+    This dashboard tracks loan portfolio performance, highlighting metrics like approval rates,
+    delinquencies, and repayment trends across different regions or customer demographics,
+    facilitating risk management and decision-making.
+  image: img/bank_loanperformance.png
+  alt: Loan Performance Tracker
+- id: assets-and-liabilities
+  title: Assets and Liabilities
+  description: >-
+    This dashboard shows the total assets, cash flow, income statement, and liabilities, along with
+    their percentage changes. Additionally, it presents a trend line graph for each metric over time
+    and a table highlighting the branch with the highest assets and its associated financial
+    details.
+  image: img/bank_assets_liabilities.png
+  alt: Assets and Liabilities Dashboard
+- id: loan-portfolio
+  title: Loan Portfolio
+  description: >-
+    This dashboard shows the total accounts, outstanding loan balance, average interest rate,
+    average loan term, and active loans. Additionally, it presents distribution charts for
+    outstanding balance by age category, available credit by age group, and account status
+    distribution. Further, it includes a scatter plot showing the correlation between FICO score and
+    interest rate, and a pie chart illustrating the loan type distribution.
+  image: img/bank_loanPortfolio.png
+  alt: Loan Portfolio Tracker
+- id: finance-kpis-tracker
+  title: Finance KPIs Tracker
+  description: >-
+    This dashboard shows the total deposits, loan growth, deposit growth, and revenue growth, along
+    with their percentage changes and progress towards annual goals. Additionally, it presents
+    circular gauges for net profit, net interest margin, customer acquisition growth, return on
+    equity, ESG loan growth, branch reduction, cost-to-income ratio, non-performing loans, staff
+    efficiency, customer retention rate, digital banking adoption, and regulatory capital ratio, all
+    with their respective values and progress towards annual goals.
+  image: img/bank_metrics_tracker.png
+  alt: Finace KPIs Tracker
+- id: bank-s-profitability-overview
+  title: Bank's Profitability Overview
+  description: >-
+    This dashboard shows the total accounts, total relationship, total net income, and total
+    provision expense. Additionally, it presents a bar chart comparing average annual profit and
+    average net income by branch, along with box plots to visualize the distribution of total
+    relationship, annual profit, and net income across the branches.
+  image: img/bank_profitability_overview.png
+  alt: Profitability overview
+- id: most-profitable-accounts
+  title: Most Profitable Accounts
+  description: >-
+    This dashboard shows the total delinquent accounts, high-risk accounts, average interest rate,
+    and loans entered last week. Additionally, it presents bar charts comparing the number of
+    delinquent accounts and the delinquent loan amount by state and by branch. Further, it includes
+    a table with detailed information about delinquent accounts, including customer name, account
+    status, loan type, date entered, age, current balance, annual profit, interest rate, APR, LTV
+    ratio, collateral value, and FICO score.
+  image: img/bank_most_profitable_acc.png
+  alt: Most Profitable accounts
+- id: bank-account-growth-dashboard
+  title: Bank Account Growth Dashboard
+  description: >-
+    Tracks growth in current, savings, and term deposits over time, showcasing key metrics such as
+    CAGR, average deposits, and growth rates. Visualizes trends in deposits across multiple time
+    frames and evaluates year-on-year performance for different account types.
+  image: img/bank_account_growth.png
+  alt: Bank Account Growth

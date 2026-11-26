@@ -67,6 +67,12 @@
             });
         });
 
+        // Blog posts: links to other websites open in a new tab.
+        document.querySelectorAll(".full-content a[href^='http']").forEach(function (link) {
+            link.target = "_blank";
+            link.rel = "noopener";
+        });
+
         document.querySelectorAll(".toggle-content").forEach(function (button) {
             var card = button.closest(".card-body");
             if (!card) {
