@@ -3,9 +3,16 @@ export const site = {
   name: 'Analytixware Technologies Pvt Ltd',
   url: 'https://analytixware.in',
   gaId: 'G-7NYJMPT9YR',
-  aisensyWidgetId: 'O9hhI0',
   address: 'A 1201 Ekta Festival, 132 Feet Ring Road, Naranpura, Ahmedabad',
   phone: '+91 9011719639',
+  // "Chat with us" WhatsApp button (bottom-left on every page)
+  whatsapp: {
+    number: '+91 9011719639', // with country code
+    message: 'Hi', // pre-filled text when the chat opens
+    greeting: 'Hi,\nHow can I help you ?',
+    brandName: 'Analytixware Technologies',
+    status: 'online',
+  },
   email: 'bhavik@analytixware.in',
   tagline:
     'We empower businesses with data insights. Leverage our data analytics solutions to stay ahead in a competitive world.',
@@ -16,17 +23,17 @@ export const site = {
     { icon: 'fab fa-instagram', href: 'https://instagram.com/Analytixware', external: true },
   ],
   nav: [
-    { label: 'Home', href: 'index.html' },
-    { label: 'About Us', href: 'about.html' },
-    { label: 'Services', href: 'service.html' },
-    { label: 'Case Study', href: 'project.html' },
-    { label: 'Blogs', href: 'blogs.html' },
-    { label: 'Contact Us', href: 'contact.html' },
+    { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Case Study', href: '/case-studies' },
+    { label: 'Blogs', href: '/blog' },
+    { label: 'Contact Us', href: '/contact' },
   ],
   footerLinks: [
-    { label: 'About Us', href: 'about.html' },
-    { label: 'Contact Us', href: 'contact.html' },
-    { label: 'Services', href: 'service.html' },
-    { label: 'Case Study', href: 'project.html' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Contact Us', href: '/contact' },
+    { label: 'Services', href: '/services' },
+    { label: 'Case Study', href: '/case-studies' },
   ],
 };

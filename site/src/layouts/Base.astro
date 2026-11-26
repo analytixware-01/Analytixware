@@ -1,42 +1,52 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import WhatsAppChat from '../components/WhatsAppChat.astro';
 import { site } from '../data/site';
 
 interface Props {
   title: string;
   description?: string;
   keywords?: string;
-  /** nav href to highlight, e.g. "about.html" */
+  /** nav href to highlight, e.g. "/about" */
   active?: string;
   /** show the template's loading spinner (the original home page has none) */
   spinner?: boolean;
-  /** extra page scripts served from /public, e.g. ["js/validation.js"] */
+  /** extra page scripts served from /public, e.g. ["/js/extra.js"] */
   scripts?: string[];
-  og?: { title: string; description: string; image: string; url: string };
+  /** override the social-share preview (defaults to the page title/description) */
+  og?: { title?: string; description?: string; image?: string };
+  /** keep this page out of search results (e.g. thank-you, 404) */
+  noindex?: boolean;
 }
 
-const { title, description = '', keywords = '', active, spinner = true, scripts = [], og } = Astro.props;
+const { title, description = '', keywords = '', active, spinner = true, scripts = [], og = {}, noindex = false } = Astro.props;
+
+// "Services" -> "Services | Analytixware Technologies"; the home page passes a full title.
+const fullTitle = title.includes('Analytixware') ? title : `${title} | Analytixware Technologies`;
+const canonical = new URL(Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '/'), site.url).href;
+const shareImage = new URL(og.image ?? '/img/back.jpg', site.url).href;
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{title}</title>
+    <title>{fullTitle}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content={keywords}>
-    <meta name="description" content={description}>
-    {og && (
-        <Fragment>
-            <meta property="og:title" content={og.title}>
-            <meta property="og:description" content={og.description}>
-            <meta property="og:image" content={og.image}>
-            <meta property="og:url" content={og.url}>
-            <meta property="og:type" content="website">
-        </Fragment>
-    )}
+    {keywords && <meta name="keywords" content={keywords}>}
+    {description && <meta name="description" content={description}>}
+    {noindex ? <meta name="robots" content="noindex, follow"> : <link rel="canonical" href={canonical}>}
 
-    <link href="img/icon.jpg" rel="icon">
+    <!-- Social share preview -->
+    <meta property="og:site_name" content="Analytixware Technologies">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={og.title ?? fullTitle}>
+    {(og.description ?? description) && <meta property="og:description" content={og.description ?? description}>}
+    <meta property="og:image" content={shareImage}>
+    <meta property="og:url" content={canonical}>
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link href="/img/icon.jpg" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,14 +58,14 @@ const { title, description = '', keywords = '', active, spinner = true, scripts 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
     <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.gaId}`}></script>
@@ -65,8 +75,6 @@ const { title, description = '', keywords = '', active, spinner = true, scripts 
       window.gtag('js', new Date());
       window.gtag('config', gaId);
     </script>
-    <!-- AiSensy WhatsApp widget -->
-    <script is:inline type="text/javascript" defer src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js" id="aisensy-wa-widget" widget-id={site.aisensyWidgetId}></script>
 
     <style is:inline>
       .hidden-text { visibility: hidden; }
@@ -91,7 +99,10 @@ const { title, description = '', keywords = '', active, spinner = true, scripts 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
 
-    <script is:inline src="js/main.js"></script>
+    <!-- WhatsApp "Chat with us" (number in src/data/site.ts) -->
+    <WhatsAppChat />
+
+    <script is:inline src="/js/main.js"></script>
     {scripts.map((src) => <script is:inline src={src}></script>)}
 </body>
 </html>

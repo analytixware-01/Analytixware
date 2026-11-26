@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { site } from '../data/site';
+---
+<Base title="Page Not Found" description="The page you were looking for could not be found." noindex>
+    <PageHero title="Page Not Found" />
+
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center" style="max-width: 600px;">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Error 404</div>
+                <h2 class="mb-4">We couldn't find that page</h2>
+                <p class="mb-4">The page may have moved or no longer exists. Try one of these instead:</p>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    {site.nav.map((item) => (
+                        <a class="btn btn-outline-primary rounded-pill px-4" href={item.href}>{item.label}</a>
+                    ))}
+                </div>
+            </div>
+        </div>
+    </div>
+</Base>

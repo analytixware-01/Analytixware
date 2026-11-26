@@ -33,17 +33,31 @@
         window.addEventListener("scroll", setStickyState, { passive: true });
 
         var navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-        var currentPage = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
-
-        navLinks.forEach(function (link) {
-            var href = (link.getAttribute("href") || "").split("#")[0].toLowerCase();
-            link.classList.toggle("active", href === currentPage);
-            if (href === currentPage) {
-                link.setAttribute("aria-current", "page");
-            } else {
-                link.removeAttribute("aria-current");
-            }
+        // "/about/", "/about", "/about.html", "/about/index.html" -> "/about"
+        var normalizePath = function (path) {
+            path = (path || "/").toLowerCase().replace(/\/index\.html$/, "/").replace(/\.html$/, "").replace(/\/+$/, "");
+            return path || "/";
+        };
+        var currentPage = normalizePath(window.location.pathname);
+        var linkPath = function (link) {
+            return normalizePath(new URL(link.getAttribute("href") || "", window.location.href).pathname);
+        };
+        var hasMatch = Array.prototype.some.call(navLinks, function (link) {
+            return linkPath(link) === currentPage;
         });
+
+        // The server already marks the active page; this only corrects it when the URL matches a menu item.
+        if (hasMatch) {
+            navLinks.forEach(function (link) {
+                var isCurrent = linkPath(link) === currentPage;
+                link.classList.toggle("active", isCurrent);
+                if (isCurrent) {
+                    link.setAttribute("aria-current", "page");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
+            });
+        }
 
         var toggler = document.querySelector(".navbar-toggler");
         var collapse = document.getElementById("navbarCollapse");

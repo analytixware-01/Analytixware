@@ -4,10 +4,10 @@ import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import DashboardRow from '../components/DashboardRow.astro';
 
-// Thank-you page after form submission: shows the dashboard templates (same data as dashboards.html).
+// Thank-you page after form submission: shows the dashboard templates (same data as /dashboards).
 const dashboards = await getInFileOrder('dashboards');
 ---
-<Base title="Dashboard Templates" description="Thank you for contacting Analytixware.">
+<Base title="Thank You" description="Thank you for contacting Analytixware." noindex>
     <PageHero title="Dashboard Templates" />
 
     <div class="container">

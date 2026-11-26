@@ -20,7 +20,11 @@ const services = defineCollection({
   loader: file('src/content/services.yaml'),
   schema: z.object({
     title: z.string(),
-    icon: z.enum(['fa-chart-bar', 'fa-brain', 'fa-chart-pie', 'fa-dollar-sign', 'fa-chart-line', 'fa-code', 'fa-comments']),
+    // Font Awesome 5 (free, solid) icon names used on the service cards
+    icon: z.enum([
+      'fa-robot', 'fa-database', 'fa-cloud', 'fa-chart-bar', 'fa-brain', 'fa-chart-pie',
+      'fa-dollar-sign', 'fa-chart-line', 'fa-code', 'fa-cogs', 'fa-comments',
+    ]),
     summary: z.string(),
     description: z.string(),
   }),

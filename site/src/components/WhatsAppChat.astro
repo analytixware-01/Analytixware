@@ -1,0 +1,166 @@
+---
+// "Chat with us" WhatsApp button + pop-up (bottom-left). Settings live in src/data/site.ts → whatsapp.
+import { site } from '../data/site';
+
+const { number, message, greeting, brandName, status } = site.whatsapp;
+const chatUrl = `https://wa.me/${number.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`;
+---
+<div class="wa-chat" data-wa-chat>
+    <div class="wa-popup" id="wa-popup" role="dialog" aria-label={`Chat with ${brandName} on WhatsApp`} hidden>
+        <div class="wa-popup-header">
+            <img src="/img/icon_hd.jpeg" alt="" width="44" height="44" class="wa-avatar">
+            <div>
+                <div class="wa-brand">{brandName}</div>
+                <div class="wa-status">{status}</div>
+            </div>
+            <button type="button" class="wa-close" aria-label="Close chat" data-wa-close>&times;</button>
+        </div>
+        <div class="wa-popup-body">
+            <div class="wa-bubble">
+                <div class="wa-bubble-name">{brandName}</div>
+                <p>{greeting}</p>
+            </div>
+        </div>
+        <div class="wa-popup-footer">
+            <a class="wa-start" href={chatUrl} target="_blank" rel="noopener" data-wa-start>
+                <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M16.2 5C10.2 5 5.4 9.8 5.4 15.8c0 2 .5 3.9 1.5 5.6L5 27.2l6-1.9a10.8 10.8 0 0 0 16-9.5C27 9.8 22.2 5 16.2 5zm0 19.8c-1.8 0-3.5-.5-4.9-1.5l-3.5 1.1 1.1-3.3a9 9 0 0 1-1.7-5.3c0-5 4-9 9-9s9 4 9 9-4 9-9 9zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/></svg>
+                Start chat
+            </a>
+        </div>
+    </div>
+
+    <button type="button" class="wa-button" aria-controls="wa-popup" aria-expanded="false" data-wa-toggle>
+        <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M16.2 5C10.2 5 5.4 9.8 5.4 15.8c0 2 .5 3.9 1.5 5.6L5 27.2l6-1.9a10.8 10.8 0 0 0 16-9.5C27 9.8 22.2 5 16.2 5zm0 19.8c-1.8 0-3.5-.5-4.9-1.5l-3.5 1.1 1.1-3.3a9 9 0 0 1-1.7-5.3c0-5 4-9 9-9s9 4 9 9-4 9-9 9zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/></svg>
+        Chat with us
+    </button>
+</div>
+
+<style is:inline>
+    .wa-chat {
+        position: fixed;
+        left: 30px;
+        bottom: 30px;
+        z-index: 1040;
+        font-family: "Open Sans", system-ui, sans-serif;
+    }
+    .wa-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border: 0;
+        border-radius: 24px;
+        background: #4dc247;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, .18);
+        cursor: pointer;
+        transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .wa-button:hover,
+    .wa-button:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, .22);
+        outline: none;
+    }
+    .wa-popup {
+        position: absolute;
+        left: 0;
+        bottom: calc(100% + 14px);
+        width: min(320px, calc(100vw - 32px));
+        overflow: hidden;
+        border-radius: 14px;
+        background: #e5ddd5;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, .22);
+        animation: wa-pop .18s ease-out;
+    }
+    .wa-popup[hidden] { display: none; }
+    @keyframes wa-pop {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: none; }
+    }
+    .wa-popup-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        background: #0A5F54;
+        color: #fff;
+    }
+    .wa-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: #fff;
+    }
+    .wa-brand { font-weight: 600; font-size: 15px; line-height: 1.3; }
+    .wa-status { font-size: 12px; opacity: .85; }
+    .wa-close {
+        margin-left: auto;
+        border: 0;
+        background: transparent;
+        color: #fff;
+        font-size: 26px;
+        line-height: 1;
+        cursor: pointer;
+        opacity: .85;
+    }
+    .wa-close:hover { opacity: 1; }
+    .wa-popup-body { padding: 20px 16px 8px; }
+    .wa-bubble {
+        display: inline-block;
+        max-width: 85%;
+        padding: 8px 12px;
+        border-radius: 0 10px 10px 10px;
+        background: #fff;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    }
+    .wa-bubble-name { font-size: 12px; font-weight: 600; color: #0A5F54; }
+    .wa-bubble p {
+        margin: 2px 0 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #303030;
+        white-space: pre-line;
+    }
+    .wa-popup-footer { padding: 12px 16px 16px; text-align: center; }
+    .wa-start {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 22px;
+        border-radius: 24px;
+        background: #4dc247;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .wa-start:hover { color: #fff; background: #3fb13a; }
+    @media (max-width: 575.98px) {
+        .wa-chat { left: 16px; bottom: 16px; }
+        .wa-button { padding: 10px 16px; font-size: 14px; }
+    }
+</style>
+
+<script is:inline>
+    (function () {
+        var root = document.querySelector('[data-wa-chat]');
+        if (!root) return;
+        var popup = root.querySelector('#wa-popup');
+        var toggle = root.querySelector('[data-wa-toggle]');
+        var setOpen = function (open) {
+            popup.hidden = !open;
+            toggle.setAttribute('aria-expanded', String(open));
+        };
+        toggle.addEventListener('click', function () { setOpen(popup.hidden); });
+        root.querySelector('[data-wa-close]').addEventListener('click', function () { setOpen(false); toggle.focus(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !popup.hidden) setOpen(false); });
+        document.addEventListener('click', function (e) { if (!root.contains(e.target)) setOpen(false); });
+        root.querySelector('[data-wa-start]').addEventListener('click', function () {
+            if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_chat_click', { page_path: location.pathname });
+            setOpen(false);
+        });
+    })();
+</script>

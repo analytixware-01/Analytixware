@@ -8,7 +8,7 @@ import BlogCard from '../components/BlogCard.astro';
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
-<Base title="Blogs" description="Articles from Analytixware on business intelligence, data analytics, dashboards and machine learning." active="blogs.html">
+<Base title="Blog" description="Articles from Analytixware on business intelligence, data analytics, dashboards and machine learning." active="/blog">
     <PageHero title="Blogs" />
 
     <div class="container my-5">

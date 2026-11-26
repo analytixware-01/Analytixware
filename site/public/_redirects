@@ -1,0 +1,13 @@
+# Old page addresses -> new addresses (Netlify / Cloudflare Pages).
+# Those hosts already serve /about from about.html; .htaccess does the same on LiteSpeed/Apache.
+/index.html          /                    301
+/service.html        /services            301
+/project.html        /case-studies        301
+/getcasestudy.html   /request-case-study  301
+/blogs.html          /blog                301
+/thankyou.html       /thank-you           301
+/index1.html         /                    301
+/project1.html       /case-studies        301
+/contact2.html       /contact             301
+/getcasestudy2.html  /request-case-study  301
+/feature.html        /services            301

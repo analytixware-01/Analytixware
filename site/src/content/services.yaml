@@ -1,6 +1,30 @@
 # Services shown on the home page (title + summary) and the Services page (title + description).
-# icon: one of fa-chart-bar, fa-brain, fa-chart-pie, fa-dollar-sign, fa-chart-line, fa-code, fa-comments
+# Cards appear in this order; the first ones are the featured services.
+# icon: one of fa-robot, fa-database, fa-cloud, fa-chart-bar, fa-brain, fa-chart-pie, fa-dollar-sign,
+#       fa-chart-line, fa-code, fa-cogs, fa-comments
 
+- id: ai-driven-solutions
+  title: AI-Driven Solutions
+  icon: fa-robot
+  summary: >-
+    Put generative AI and machine learning to work with assistants, document intelligence,
+    forecasting, and smart automation.
+  description: >-
+    AI-driven solutions bring generative AI, large language models, and machine learning into
+    everyday business workflows. We build intelligent assistants, document and email automation,
+    predictive insights, and recommendation engines that plug into your existing systems, helping
+    teams work faster and make better decisions.
+- id: cloud-data-integration-and-warehousing
+  title: Cloud Data Integration & Warehousing
+  icon: fa-database
+  summary: >-
+    Unify data from every source into a secure cloud data warehouse built for reporting, analytics,
+    and AI.
+  description: >-
+    We connect your applications, databases, spreadsheets, and SaaS tools to a modern cloud data
+    warehouse such as BigQuery, Snowflake, Azure Synapse, or Amazon Redshift. Automated ETL/ELT
+    pipelines extract, clean, and transform your data so it stays current and secure, giving your
+    dashboards, analytics, and AI one reliable source of truth.
 - id: statistical-analysis
   title: Statistical Analysis
   icon: fa-chart-bar
@@ -37,14 +61,6 @@
     historical data and market trends. They help in decision-making by simulating different
     scenarios. These models are essential for budgeting, investment analysis, and strategic
     planning.
-- id: data-integration-and-etl
-  title: Data Integration & ETL
-  icon: fa-chart-line
-  summary: Connect spreadsheets, apps, databases, and cloud tools into clean analytics-ready datasets.
-  description: >-
-    Data Integration & ETL (Extract, Transform, Load) services streamline data movement across
-    systems, ensuring seamless integration, transformation, and loading. We optimize data workflows
-    to enhance efficiency and enable insightful decision-making.
 - id: process-automation
   title: Process Automation
   icon: fa-code

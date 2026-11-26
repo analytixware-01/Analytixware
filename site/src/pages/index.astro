@@ -5,16 +5,16 @@ import ServiceCard from '../components/ServiceCard.astro';
 
 const services = await getInFileOrder('services');
 ---
-<Base title='Analytixware Technologies - Data Analysis & Executive Dashboards' description='Analytixware Technologies delivers top-tier data analytics and visualization solutions, offering customized executive dashboards for business insights.' keywords='Data Analysis, Data Visualization, AI Solutions, Executive Dashboards, Analytixware, Machine Learning, ETL Services' active='index.html' spinner={false} og={{"title":"Unlock the Power of Your Retail Data with Analytixware","description":"Discover how custom dashboards and data analytics can drive your retail business forward. Sign up for a 60-day free trial!","image":"https://analytixware.in/img/back.jpg","url":"https://analytixware.in"}}>
+<Base title='Analytixware Technologies - AI Solutions, Data Analytics & Dashboards' description='Analytixware Technologies builds AI-driven solutions, cloud data warehouses, and executive dashboards that turn business data into faster, smarter decisions.' keywords='AI Solutions, Cloud Data Warehouse, Data Integration, Data Analysis, Data Visualization, Executive Dashboards, Analytixware, Machine Learning, ETL Services' active='/' spinner={false} og={{"title":"AI-Driven Solutions for Your Business | Analytixware","description":"AI assistants, document automation, predictive analytics, cloud data warehousing and executive dashboards that help your teams decide faster and grow with confidence.","image":"/img/back.jpg"}}>
     <section class="hero-section" role="banner">
         <div class="container-fluid pt-5 bg-primary hero-header mb-5">
             <div class="container pt-5">
                 <div class="row g-5 pt-5">
                     <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                        <h1 class="display-4 text-white mb-4 animated slideInRight">Data Analysis for Your Business</h1>
-                        <p class="text-white mb-4 animated slideInRight">Organizations that leverage data analytics effectively gain a competitive edge in today's data-driven world. By analyzing data, businesses can identify unique insights and trends to stay ahead of the competition.</p>
-                        <a href="about.html" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Read More</a>
-                        <a href="contact.html" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                        <h1 class="display-4 text-white mb-4 animated slideInRight">AI-Driven Solutions for Your Business</h1>
+                        <p class="text-white mb-4 animated slideInRight">Put artificial intelligence to work where it matters most. From intelligent assistants and document automation to predictive analytics, we design AI solutions on a secure cloud data foundation that help your teams decide faster, work smarter, and grow with confidence.</p>
+                        <a href="/services" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Explore Services</a>
+                        <a href="/contact" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -22,14 +22,25 @@ const services = await getInFileOrder('services');
     </section>
 
     <main>
-        
+        <section class="services bg-light py-5">
+            <div class="container py-5">
+                <header class="text-center">
+                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Services</div>
+                    <h2 class="mb-4">AI, Cloud &amp; Data Analytics Solutions</h2>
+                </header>
+                <div class="row g-4 justify-content-center">
+                    {services.map((s) => <ServiceCard service={s.data} />)}
+                </div>
+            </div>
+        </section>
+
         <section class="dashboard-projects py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <div class="video-loop">
-                            <video class="img-fluid" autoplay muted loop aria-label="Executive Dashboard Video">
-                                <source src="img/bankmetrics.mp4" type="video/mp4">
+                            <video class="img-fluid" autoplay muted loop playsinline preload="metadata" aria-label="Executive Dashboard Video">
+                                <source src="/img/bankmetrics.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -37,21 +48,9 @@ const services = await getInFileOrder('services');
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Executive Dashboard Service</div>
                         <h2 class="mb-4">Power Your Business with Looker Studio Dashboards</h2>
-                        <p>Our executive dashboards offer real-time insights with Looker Studio, empowering decision-makers at every level. Explore our data visualization templates  ->  <a href="dashboards.html" class="highlight-link">here</a></p>
-                        <p>View critical business metrics, monitor performance, and make data-driven decisions. <a href="contact.html">Contact us</a> for a free demo.</p>
+                        <p>Our executive dashboards offer real-time insights with Looker Studio, empowering decision-makers at every level. Explore our data visualization templates  ->  <a href="/dashboards" class="highlight-link">here</a></p>
+                        <p>View critical business metrics, monitor performance, and make data-driven decisions. <a href="/contact">Contact us</a> for a free demo.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="services bg-light py-5">
-            <div class="container py-5">
-                <header class="text-center">
-                    <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Services</div>
-                    <h2 class="mb-4">Comprehensive Data Analysis Solutions</h2>
-                </header>
-                <div class="row g-4">
-                    {services.map((s) => <ServiceCard service={s.data} />)}
                 </div>
             </div>
         </section>

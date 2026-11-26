@@ -1,0 +1,58 @@
+# Analytixware - clean URLs for LiteSpeed / Apache hosting
+Options -MultiViews -Indexes
+RewriteEngine On
+DirectoryIndex index.html
+
+# --- Force HTTPS -------------------------------------------------------------
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L,NE]
+
+# --- Old page addresses -> new addresses (301, keeps Google rankings) -------
+RewriteRule ^index\.html$          /                    [R=301,L]
+RewriteRule ^service\.html$        /services            [R=301,L]
+RewriteRule ^project\.html$        /case-studies        [R=301,L]
+RewriteRule ^getcasestudy\.html$   /request-case-study  [R=301,L]
+RewriteRule ^blogs\.html$          /blog                [R=301,L]
+RewriteRule ^thankyou\.html$       /thank-you           [R=301,L]
+# Retired draft pages
+RewriteRule ^index1\.html$         /                    [R=301,L]
+RewriteRule ^project1\.html$       /case-studies        [R=301,L]
+RewriteRule ^contact2\.html$       /contact             [R=301,L]
+RewriteRule ^getcasestudy2\.html$  /request-case-study  [R=301,L]
+RewriteRule ^feature\.html$        /services            [R=301,L]
+
+# --- Anything else typed with .html -> same address without it --------------
+# (the Google Search Console verification file is left alone)
+RewriteCond %{REQUEST_URI} !^/google[0-9a-f]+\.html$ [NC]
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# --- Remove trailing slash: /about/ -> /about --------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# --- Serve /about from about.html (internal, URL stays clean) ---------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)$ /$1.html [L]
+
+ErrorDocument 404 /404.html
+
+# --- Caching: assets for 30 days, pages always fresh ------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# --- Compression --------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml
+</IfModule>
