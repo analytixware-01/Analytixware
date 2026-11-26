@@ -1,0 +1,40 @@
+---
+import { site } from '../data/site';
+const year = new Date().getFullYear();
+---
+<div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <h1 class="text-white"><img src="img/logo-no-background.png" class="logo" alt="Analytixware Logo" loading="lazy" decoding="async"></h1>
+                </a>
+                <p class="mb-0">{site.tagline}</p>
+            </div>
+            <div class="col-md-4 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="text-white mb-4">Contact Us</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>{site.address}</p>
+                <p><i class="fa fa-phone-alt me-3"></i>{site.phone}</p>
+                <p><i class="fa fa-envelope me-3"></i>{site.email}</p>
+                <div class="d-flex pt-2">
+                    {site.social.map((s) => (
+                        <a class="btn btn-outline-light btn-social" href={s.href} target={s.external ? '_blank' : undefined} rel={s.external ? 'noopener' : undefined}><i class={s.icon}></i></a>
+                    ))}
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="text-white mb-4">Popular Link</h5>
+                {site.footerLinks.map((l) => <a class="btn btn-link" href={l.href}>{l.label}</a>)}
+            </div>
+        </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="text-center text-md-start mb-3 mb-md-0">
+                    Copyright &copy; {year} {site.name}. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

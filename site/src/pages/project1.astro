@@ -1,0 +1,89 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title='Projects' active='project.html'>
+    <div class="container-fluid pt-5 bg-primary hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Our Projects</h1>
+                    <nav aria-label="breadcrumb">
+                        
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="img/hero-img.jpg" alt="" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<style is:inline>
+    h2.no-wrap {
+        white-space: nowrap; /* Prevent text from wrapping */
+        font-size: 1.8rem; /* Optional: Adjust font size as needed */
+    }
+</style>
+    
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Case Study</div>
+                <h2 class="no-wrap">Explore Our Recent  Case Studies</h2>
+            </div>
+            <div class="row g-10 justify-content-center" >
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s" style="max-width: 370px;">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img loading="lazy" decoding="async" class="img-fluid" src="img/grey-bg.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="getcasestudy.html">
+                            <h4 class="lh-base text-white mb-3">Donation Optimal Ask</h4>
+                            <p class="lh-base text-white mb-3">
+                            CAU stands for Clark Atlanta University in the US. Rising Analytics worked closely with the CAU Alumni Relations Department. The CAU Alumni Relations Department works to establish, build, maintain, and strengthen the relationships with Alumni constituents, and drive alumni donations to the Clark Atlanta University. The team is also responsible for...</p>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s" style="max-width: 370px;">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img loading="lazy" decoding="async" class="img-fluid" src="img/grey-bg.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="getcasestudy.html">
+                            <h4 class="lh-base text-white mb-3">Credit Risk Model</h4>
+                            <p class="lh-base text-white mb-3">Credit risk modeling refers to the use of financial models to estimate losses a firm might suffer in the event of a borrower's default. This model helps to evaluate credit score of each borrower based on their demographics, past accounting variables and third-party data such as Vantage score and Fico score. The Credit Score helps to determine many factors . . .</p>                       <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s" style="max-width: 370px;">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img loading="lazy" decoding="async" class="img-fluid" src="img/grey-bg.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="getcasestudy.html">
+                            <h4 class="lh-base text-white mb-3">Propensity to Pay</h4>
+                            <p class="lh-base text-white mb-3">In today's world where there is economic uncertainty for every human being, it's quite necessary to understand the financial condition of an individual and have a proper debt management program in order to avoid huge write-off amount and reduce number of defaulters. It becomes necessary to identify and divide customers in various segments where...</p>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+<iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/9114ea1c-f347-4dec-8010-f3ddb3ccda1a/page/p_jg2o3tjmld" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
+
+        </div>
+
+    </div>
+</Base>
